@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI First Innovations - Building AI-first products and companies</title>
+<meta name="description" content="AI First Innovations helps organizations design, build and scale products where AI is the foundation, not an add-on.">
+<meta property="og:title" content="AI First Innovations">
+<meta property="og:description" content="Designing and building AI-first products and companies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aifirstinnovations.com/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F7FB; --surface:#FFFFFF; --ink:#131B2E; --muted:#56607A; --line:#DDE1EC;
+  --accent:#2F5BFF; --accent-ink:#FFFFFF; --warm:#E9A23B; --hero:#0F1A33; --hero-ink:#F2F5FF;
+  --head:"Sora","Segoe UI",system-ui,sans-serif; --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B1120; --surface:#131C31; --ink:#E9EDF8; --muted:#9AA5C0; --line:#243050; --accent:#6C8BFF; --accent-ink:#0B1120; --hero:#0A1226;
+}}
+:root[data-theme="dark"]{
+  --bg:#0B1120; --surface:#131C31; --ink:#E9EDF8; --muted:#9AA5C0; --line:#243050; --accent:#6C8BFF; --accent-ink:#0B1120; --hero:#0A1226;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.2;margin:0 0 .6em;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.5vw,2.4rem);text-align:center}
+h3{font-size:1.25rem} h4{font-size:1.05rem}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--warm);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.lead{max-width:680px;margin:0 auto 48px;text-align:center;color:var(--muted)}
+
+/* nav */
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{font-family:var(--head);font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:600}
+nav ul a:hover{color:var(--accent)}
+#theme{font:inherit;font-size:.9rem;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+
+/* hero */
+#home{background:var(--hero);color:var(--hero-ink);text-align:center;padding:120px 0 110px}
+#home h1{font-size:clamp(2.4rem,6vw,4.2rem);max-width:15ch;margin:0 auto .5em}
+#home p{max-width:640px;margin:0 auto 2em;color:#C3CCE6;font-size:1.15rem}
+.btn{display:inline-block;background:var(--warm);color:#1A1204;font-family:var(--head);font-weight:600;text-decoration:none;padding:14px 28px;border-radius:8px}
+.btn:hover{filter:brightness(1.08)}
+
+/* content blocks */
+.story{max-width:720px;margin:0 auto}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:28px}
+.card.vm{border-left:5px solid var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.grid .card{padding:24px}
+.grid p{color:var(--muted);margin:0;font-size:1rem}
+.icon{font-size:1.8rem;display:block;margin-bottom:8px}
+.alt{background:color-mix(in srgb,var(--surface) 60%,var(--bg))}
+.product{display:grid;gap:8px}
+.portfolio-card{text-align:left}
+.p-icon{width:64px;height:64px;border-radius:12px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);display:grid;place-items:center;margin-bottom:16px}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:center}
+footer{background:var(--hero);color:#C3CCE6;text-align:center;padding:56px 0}
+footer h3{color:var(--hero-ink)}
+footer a{color:var(--warm);font-weight:600}
+footer small{display:block;margin-top:28px;opacity:.7}
+
+@media (max-width:760px){nav ul{display:none} section{padding:64px 0} #home{padding:88px 0 80px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="#home">AI First Innovations</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#principles">Principles</a></li>
+        <li><a href="#work">What We Do</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme" type="button" aria-label="Toggle dark mode">🌙 Dark</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="home">
+  <div class="wrap">
+    <h1>AI is where we start, not where we end up.</h1>
+    <p>AI First Innovations designs and builds products and companies with AI at the foundation, while keeping human judgment, creativity and care at the center.</p>
+    <a class="btn" href="#work">See what we build</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Our Story</h2>
+    <div class="story">
+      <p>Most teams add AI to a product after it is built. The results are usually a chatbot bolted onto an old workflow. We started AI First Innovations on a different question: what would this product look like if AI were part of the design from day one?</p>
+      <p>That question changes everything, from how data is collected to how people and software share the work. We turn it into working products, pilots and playbooks that organizations can use now.</p>
+      <p>Today we partner with founders and teams who want to build AI-first, and we run our own experiments to prove what works.</p>
+    </div>
+    <div class="two">
+      <div class="card vm"><h3>Our Vision</h3><p>A world where AI-first thinking makes organizations faster, fairer and more useful to the people they serve.</p></div>
+      <div class="card vm"><h3>Our Mission</h3><p>Help teams design, build and scale AI-first products, with clear results and responsible practices.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="principles" class="alt">
+  <div class="wrap">
+    <h2>Our Principles</h2>
+    <p class="lead">How an AI-first approach shapes the way we work.</p>
+    <div class="grid">
+      <div class="card"><span class="icon" aria-hidden="true">🎯</span><h4>Start with AI</h4><p>We design around what AI does well from the first sketch, instead of retrofitting it later.</p></div>
+      <div class="card"><span class="icon" aria-hidden="true">📊</span><h4>Evidence over hype</h4><p>Every idea gets a small experiment and a clear success metric before we scale it.</p></div>
+      <div class="card"><span class="icon" aria-hidden="true">🧭</span><h4>Human-centered</h4><p>Our systems support people and keep them in control of important decisions.</p></div>
+      <div class="card"><span class="icon" aria-hidden="true">🛡️</span><h4>Responsible by design</h4><p>Privacy, safety and fairness are built in from the start.</p></div>
+      <div class="card"><span class="icon" aria-hidden="true">🔁</span><h4>Always improving</h4><p>Our products learn from use and get better as needs and models change.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>What We Do</h2>
+    <p class="lead">Three ways we put AI-first ideas to work.</p>
+    <div class="grid">
+      <div class="card product"><h3>AI Product Studio</h3><p>We take an idea from concept to a working AI-first product, including design, engineering and launch.</p></div>
+      <div class="card product"><h3>AI-First Strategy</h3><p>We help leadership teams find the workflows where AI creates the most value and plan how to adopt it.</p></div>
+      <div class="card product"><h3>Internal Ventures</h3><p>We build and test our own AI-first products, and we turn the ones that work into companies.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="alt">
+  <div class="wrap">
+    <h2>Portfolio</h2>
+    <p class="lead">AI-first ventures we are building.</p>
+    <div class="grid">
+      <div class="card portfolio-card">
+        <div class="p-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="56" height="56"><rect x="10" y="12" width="34" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="10" y1="20" x2="44" y2="20" stroke="currentColor" stroke-width="2"/><line x1="10" y1="28" x2="44" y2="28" stroke="currentColor" stroke-width="2"/><line x1="18" y1="12" x2="18" y2="36" stroke="currentColor" stroke-width="2"/><line x1="27" y1="12" x2="27" y2="36" stroke="currentColor" stroke-width="2"/><line x1="36" y1="12" x2="36" y2="36" stroke="currentColor" stroke-width="2"/><line x1="27" y1="36" x2="27" y2="46" stroke="currentColor" stroke-width="2.5"/><line x1="18" y1="46" x2="36" y2="46" stroke="currentColor" stroke-width="2.5"/><path d="M46 18 L52 12 M46 24 L54 24 M46 30 L52 36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Autonomous Solar Installation</h4>
+        <p>Robotic systems that install solar panels autonomously, cutting the time and labor cost of deployment.</p>
+      </div>
+      <div class="card portfolio-card">
+        <div class="p-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="56" height="56"><path d="M32 50 C14 38 8 26 16 18 C22 12 30 14 32 22 C34 14 42 12 48 18 C56 26 50 38 32 50 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polyline points="16,30 24,30 27,22 31,38 35,26 38,30 48,30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>CVD Risk AI Platform</h4>
+        <p>An AI platform focused on assessing and detecting cardiovascular disease risk in women.</p>
+      </div>
+      <div class="card portfolio-card">
+        <div class="p-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="56" height="56"><path d="M22 14 C12 14 8 22 12 28 C8 32 10 40 18 41 C19 47 27 50 32 46 C37 50 45 47 46 41 C54 40 56 32 52 28 C56 22 52 14 42 14 C39 10 31 10 28 14 C26 12 24 12 22 14 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 22 C24 28 30 28 30 33 C30 37 26 37 26 41" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M38 20 C38 26 33 27 33 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Systems-Based Wellbeing Framework</h4>
+        <p>A systems-based AI framework that supports human wellbeing across physical, mental and social factors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Get in Touch</h2>
+    <p class="lead">Whether you want to build, partner or invest, we would like to hear from you.</p>
+    <div class="contact-grid">
+      <div class="card"><span class="icon" aria-hidden="true">✉️</span><h4>Email us</h4><p><a href="mailto:aifirstinnovations@gmail.com">aifirstinnovations@gmail.com</a></p></div>
+      <div class="card"><span class="icon" aria-hidden="true">📍</span><h4>Location</h4><p>Austin, TX, USA</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h3>Ready to build AI-first?</h3>
+    <p><a href="mailto:aifirstinnovations@gmail.com">aifirstinnovations@gmail.com</a></p>
+    <small>&copy; <span id="yr">2026</span> AI First Innovations. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  function isDark(){
+    var t=root.getAttribute('data-theme');
+    return t? t==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function label(){btn.textContent=isDark()?'☀️ Light':'🌙 Dark';}
+  try{var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  label();
+  btn.addEventListener('click',function(){
+    var next=isDark()?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    label();
+  });
+})();
+</script>
+</body>
+</html>
