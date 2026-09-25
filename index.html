@@ -41,7 +41,9 @@ section{padding:88px 0}
 /* nav */
 header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
-.brand{font-family:var(--head);font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none}
+.brand{font-family:var(--head);font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand-logo{height:32px;width:auto;display:block}
+.hero-logo{height:88px;width:auto;display:block;margin:0 auto 28px}
 nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
 nav ul a{color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:600}
 nav ul a:hover{color:var(--accent)}
@@ -60,6 +62,13 @@ nav ul a:hover{color:var(--accent)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:28px}
 .card.vm{border-left:5px solid var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.grid-5{grid-template-columns:repeat(5,1fr)}
+.grid-5 .card{padding:20px 16px}
+.grid-5 .icon{font-size:1.5rem}
+.grid-5 h4{font-size:.98rem}
+.grid-5 p{font-size:.92rem}
+@media (max-width:900px){.grid-5{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.grid-5{grid-template-columns:1fr}}
 .grid .card{padding:24px}
 .grid p{color:var(--muted);margin:0;font-size:1rem}
 .icon{font-size:1.8rem;display:block;margin-bottom:8px}
@@ -72,9 +81,6 @@ footer{background:var(--hero);color:#C3CCE6;text-align:center;padding:56px 0}
 footer h3{color:var(--hero-ink)}
 footer a{color:var(--warm);font-weight:600}
 footer small{display:block;margin-top:28px;opacity:.7}
-
-.brand{display:flex;align-items:center;gap:10px}
-.brand-logo{height:32px;width:auto;display:block}
 
 @media (max-width:760px){nav ul{display:none} section{padding:64px 0} #home{padding:88px 0 80px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -101,6 +107,7 @@ footer small{display:block;margin-top:28px;opacity:.7}
 <main>
 <section id="home">
   <div class="wrap">
+    <img src="Logo.png" alt="AI First Innovations" class="hero-logo">
     <h1>AI is where we start, not where we end up.</h1>
     <p>AI First Innovations designs and builds products and companies with AI at the foundation, while keeping human judgment, creativity and care at the center.</p>
     <a class="btn" href="#work">See what we build</a>
@@ -126,7 +133,7 @@ footer small{display:block;margin-top:28px;opacity:.7}
   <div class="wrap">
     <h2>Our Principles</h2>
     <p class="lead">How an AI-first approach shapes the way we work.</p>
-    <div class="grid">
+    <div class="grid grid-5">
       <div class="card"><span class="icon" aria-hidden="true">🎯</span><h4>Start with AI</h4><p>We design around what AI does well from the first sketch, instead of retrofitting it later.</p></div>
       <div class="card"><span class="icon" aria-hidden="true">📊</span><h4>Evidence over hype</h4><p>Every idea gets a small experiment and a clear success metric before we scale it.</p></div>
       <div class="card"><span class="icon" aria-hidden="true">🧭</span><h4>Human-centered</h4><p>Our systems support people and keep them in control of important decisions.</p></div>
