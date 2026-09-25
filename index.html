@@ -19,9 +19,6 @@
   --accent:#2F5BFF; --accent-ink:#FFFFFF; --warm:#E9A23B; --hero:#0F1A33; --hero-ink:#F2F5FF;
   --head:"Sora","Segoe UI",system-ui,sans-serif; --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0B1120; --surface:#131C31; --ink:#E9EDF8; --muted:#9AA5C0; --line:#243050; --accent:#6C8BFF; --accent-ink:#0B1120; --hero:#0A1226;
-}}
 :root[data-theme="dark"]{
   --bg:#0B1120; --surface:#131C31; --ink:#E9EDF8; --muted:#9AA5C0; --line:#243050; --accent:#6C8BFF; --accent-ink:#0B1120; --hero:#0A1226;
 }
@@ -210,8 +207,7 @@ footer small{display:block;margin-top:28px;opacity:.7}
   var root=document.documentElement, btn=document.getElementById('theme');
   document.getElementById('yr').textContent=new Date().getFullYear();
   function isDark(){
-    var t=root.getAttribute('data-theme');
-    return t? t==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return root.getAttribute('data-theme')==='dark';
   }
   function label(){btn.textContent=isDark()?'☀️ Light':'🌙 Dark';}
   try{var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
